@@ -12,8 +12,20 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 
 const app = express();
+
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://library-front-dusky.vercel.app"
+]
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: function(origin, callback){
+        if(!origin) return callback(null, true);
+        if(allowedOrigins.indexOf(origin) === -1){
+            const msg = "O CORS não permite esta origem: "+ origin;
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
     credentials: true
 }));
 app.use(express.json());
