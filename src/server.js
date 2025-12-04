@@ -15,7 +15,7 @@ const app = express();
 
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://library-front-dusky.vercel.app"
+    "https://library-front-ekd8nvecu-carolinejesus-projects.vercel.app/"
 ]
 app.use(cors({
     origin: function(origin, callback){
