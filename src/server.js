@@ -18,7 +18,8 @@ const allowedOrigins = [
     "https://library-front-dusky.vercel.app",
     "library-front-dusky.vercel.app",
     "https://library-front-carolinejesus-projects.vercel.app",
-    "https://library-front-git-main-carolinejesus-projects.vercel.app"
+    "https://library-front-git-main-carolinejesus-projects.vercel.app",
+    "https://library-front-un6g.onrender.com"
 ]
 app.use(cors({
     origin: function(origin, callback){
