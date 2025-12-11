@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken"; 
 import dotenv from "dotenv";
 dotenv.config();
+
 const { JWT_ACCESS_SECRET } = process.env;
 
 export function authMiddleware(req, res, next) {
